@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  background: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.light,
+.yellow,
+.green {
+  height: 200px;
+  width: 200px;
+  border: 15px solid;
+  background: linear-gradient(red 50%, #ff948d 50%);
+  border-color: darkred;
+}
+.yellow {
+  background: yellow;
+  border-color: #b8860b;
+}
+.green {
+  background: green;
+  border-color: darkgreen;
+}
+.yellow::after,
+.green::after {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  background: #ffff9d;
+  transform: translate(114%, 114%);
+}
+.green::after {
+  background-color: #92bf8b;
+  transform: translate(0, 114%);
+}
